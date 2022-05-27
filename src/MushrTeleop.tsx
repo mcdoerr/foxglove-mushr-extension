@@ -97,7 +97,7 @@ function MushrTeleop({ context }: { context: PanelExtensionContext }): JSX.Eleme
         {canPublish &&
           (<div style={teleopStyles.box}>
             <button 
-              style={{...teleopStyles.button, ...(message.data == "pose" ? teleopStyles.selected : {})}}
+              style={{...teleopStyles.button, ...(message.data === "pose" ? teleopStyles.selected : {})}}
               onClick={() => {
                 setMessageValue("pose");
               }}
@@ -105,7 +105,14 @@ function MushrTeleop({ context }: { context: PanelExtensionContext }): JSX.Eleme
                 Set Pose
             </button>
             <button 
-              style={{...teleopStyles.button, ...(message.data == "goal" ? teleopStyles.selected : {})}}
+              style={{...teleopStyles.button, ...(message.data === "estimate" ? teleopStyles.selected : {})}}
+              onClick={() => {
+                setMessageValue("estimate");
+              }}
+            >
+              Set Pose Estimate</button>
+            <button 
+              style={{...teleopStyles.button, ...(message.data === "goal" ? teleopStyles.selected : {})}}
               onClick={() => {
                 setMessageValue("goal");
               }}
