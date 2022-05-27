@@ -1,8 +1,8 @@
 {
-  "name": "MushrTeleop",
+  "name": "MushrTeleopButtons",
   "displayName": "MushrTeleop",
-  "description": "",
-  "publisher": "unknown",
+  "description": "Custom buttons for differentiating publish types for the MuShr base package",
+  "publisher": "UW-PRL",
   "homepage": "",
   "version": "0.0.0",
   "license": "UNLICENSED",
